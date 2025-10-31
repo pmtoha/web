@@ -75,6 +75,33 @@
     h1 { font-size: 2.8rem; margin-bottom: 10px; font-weight: 700; }
     .tagline { font-size: 1.4rem; font-weight: 300; margin-bottom: 20px; opacity: 0.9; }
     .intro-text { max-width: 600px; margin: 0 auto 30px; font-size: 1.1rem; }
+    
+    /* Loader */
+    .loader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--primary);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease-out;
+    }
+    .loader-circle {
+      width: 50px;
+      height: 50px;
+      border: 5px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: white;
+      animation: spin 1s ease-in-out infinite;
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
     /* Navigation */
     nav {
       background: white;
@@ -231,6 +258,26 @@
       background-color: var(--primary);
       color: white;
       transform: translateY(-2px);
+    }
+    
+    /* Flag Section */
+    .flag-text {
+      text-align: center;
+      margin-top: 20px;
+      font-style: italic;
+      color: var(--gray);
+    }
+    
+    /* Typing Effect */
+    .typing {
+      display: inline-block;
+      border-right: 3px solid white;
+      animation: blink 0.7s infinite;
+    }
+    
+    @keyframes blink {
+      0%, 50% { border-color: white; }
+      51%, 100% { border-color: transparent; }
     }
     
     /* Enhanced Mobile Responsiveness */
@@ -441,11 +488,12 @@
   </style>
 </head>
 <body>
+
+
   <!-- Header -->
   <header>
     <div class="header-content">
-      <h1>Hi, I'm Abrar Ishraq Toha</h1>
-      <p class="tagline">.</p>
+      <h1>Hi, I'm Abrar Ishraq Toha<span class="typing"></span></h1>
       <a href="#contact" class="btn"><i class="fas fa-envelope"></i> Get in Touch</a>
     </div>
   </header>
@@ -477,9 +525,8 @@
           <img src="20250917_010121.png" alt="TOHA" class="about-img">
         </div>
         <div class="about-content">
-          <h3 class="about-title"></h3>
+          <h3 class="about-title">Abrar Ishraq Toha</h3>
           <p class="about-text">Hello, I'm Abrar Ishraq Toha from Rajshahi, Bangladesh. I love technology and work with both software and hardware. I started learning early and now have skills in programming, robotics, wiring, and fixing circuits. I enjoy learning new things and building solutions that connect software and hardware.</p>
-         
         </div>
       </div>
     </section>
@@ -520,15 +567,22 @@
         <a href="tel:+880" class="btn"><i class="fas fa-phone"></i> Call</a>
       </div>
     </section>
+
+
     <!-- Bangladesh -->
-    <section id="bangladesh" class="section">
+    <section id="bangladesh" class="animate">
       <div class="section-header">
-        <h2>BANGLADESH</h2>
+        <i class="fas fa-flag"></i>
+        <h2 class="section-title">BANGLADESH</h2>
       </div>
       <div style="text-align: center;">
         <img src="Flag_of_Bangladesh.png" alt="Bangladesh Flag" style="width:300px; height:200px; border-radius: 8px; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
       </div>
+
+      <p class="flag-text">Proud to be from the beautiful country of Bangladesh</p>
     </section>
+
+
     <!-- Social -->
     <section id="social" class="social-section animate delay-3">
       <div class="section-header">
@@ -561,6 +615,16 @@
   </footer>
   <!-- JS -->
   <script>
+    // Loader
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        document.getElementById('loader').style.opacity = '0';
+        setTimeout(function() {
+          document.getElementById('loader').style.display = 'none';
+        }, 500);
+      }, 1000);
+    });
+    
     // Navbar toggle
     document.querySelector('.nav-toggle').addEventListener('click', () => {
       document.querySelector('.nav-links').classList.toggle('show');
@@ -588,6 +652,38 @@
         observer.observe(el);
       });
     });
+    
+    // Typing effect
+    const typingElement = document.querySelector('.typing');
+    const textArray = ['!', '.', ' ', ' '];
+    let textIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    
+    function type() {
+      const currentText = textArray[textIndex];
+      
+      if (isDeleting) {
+        typingElement.textContent = currentText.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typingElement.textContent = currentText.substring(0, charIndex + 1);
+        charIndex++;
+      }
+      
+      if (!isDeleting && charIndex === currentText.length) {
+        isDeleting = true;
+        setTimeout(type, 2000);
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        textIndex = (textIndex + 1) % textArray.length;
+        setTimeout(type, 500);
+      } else {
+        setTimeout(type, isDeleting ? 50 : 150);
+      }
+    }
+    
+    setTimeout(type, 1000);
   </script>
 </body>
 </html>
