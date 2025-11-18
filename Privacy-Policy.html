@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy - ABRAR ISHRAQ TOHA</title>
+  <link rel="icon" href="ttt.png" type="image/png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1e40af',
+            primaryDark: '#1e3a8a',
+            secondary: '#2563eb',
+            accent: '#00CFFF',
+            lightGray: '#f8fafc'
+          },
+          fontFamily: {
+            'inter': ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .animate-fade-in {
+      animation: fadeIn 0.5s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .social-icon {
+      transition: all 0.3s ease;
+    }
+    .social-icon:hover {
+      transform: translateY(-3px) scale(1.1);
+    }
+    .member-card {
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .member-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+    }
+    .gradient-text {
+      background: linear-gradient(to right, #1e40af, #00CFFF);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .stat-card {
+      transition: all 0.3s ease;
+    }
+    .stat-card:hover {
+      transform: translateY(-5px);
+    }
+    .footer-link {
+      transition: all 0.2s ease;
+    }
+    .footer-link:hover {
+      color: #00CFFF;
+      padding-left: 5px;
+    }
+    .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%231e3a8a' fill-opacity='1' d='M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,90.7C672,85,768,107,864,128C960,149,1056,171,1152,165.3C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+      background-size: cover;
+    }
+    
+    /* Button styles */
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background: linear-gradient(to right, #1e40af, #2563eb);
+      color: white;
+      border-radius: 5px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      text-decoration: none;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    .btn-secondary {
+      background: linear-gradient(to right, #00CFFF, #1e40af);
+    }
+    
+    .section-title {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+    
+    .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      width: 50px;
+      height: 4px;
+      background: linear-gradient(90deg, #1e40af, #00CFFF);
+      border-radius: 2px;
+    }
+    
+    .policy-section {
+      margin-bottom: 2rem;
+    }
+    
+    .policy-subtitle {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #1e40af;
+      margin-bottom: 1rem;
+      margin-top: 1.5rem;
+    }
+    
+    .policy-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    
+    .policy-list li {
+      position: relative;
+      padding-left: 25px;
+      margin-bottom: 0.8rem;
+    }
+    
+    .policy-list li:before {
+      content: '•';
+      position: absolute;
+      left: 0;
+      color: #00CFFF;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-inter">
+
+<!-- Navbar -->
+<nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+  <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+    <a href="index.html" class="flex items-center">
+      <img src="ttt.png" alt="Photo" class="h-10">
+      <span class="ml-3 font-bold text-xl">TOHA</span>
+    </a>
+    <div class="hidden md:flex space-x-6">
+    </div>
+    <button id="menuBtn" class="md:hidden text-primary">
+      <i class="fas fa-bars text-2xl"></i>
+    </button>
+  </div>
+  
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg">
+    <div class="px-4 py-2 space-y-2">
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="pt-28 pb-16 bg-gradient-to-br from-primary to-secondary text-white relative overflow-hidden">
+  <div class="absolute inset-0 bg-black opacity-10"></div>
+  <div class="container mx-auto px-4 relative z-10">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">Privacy Policy</h1>
+    <p class="text-lg max-w-2xl mx-auto animate-fade-in opacity-90">Last updated: Novembar 1, 2025</p>
+  </div>
+  <div class="wave"></div>
+</section>
+
+<!-- Spacer -->
+<div class="h-12"></div>
+
+<!-- Privacy Policy Content -->
+<section class="py-16 bg-lightGray">
+  <div class="container mx-auto px-4">
+    <div class="max-w-4xl mx-auto">
+      <div class="bg-white rounded-xl shadow-lg p-8">
+        <div class="policy-section">
+          <h2 class="policy-subtitle">Introduction</h2>
+          <p class="text-gray-600 leading-relaxed">Welcome to the Privacy Policy of ABRAR ISHRAQ TOHA. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.</p>
+        </div>
+        
+        <div class="policy-section">
+          <h2 class="policy-subtitle">Information We Collect</h2>
+          <p class="text-gray-600 leading-relaxed mb-4">I may collect several types of information from and about users of my website, including:</p>
+          <ul class="policy-list text-gray-600">
+            <li>Technical information (IP address, browser type)</li>
+          </ul>
+        </div>
+        
+
+        
+        <div class="policy-section">
+          <h2 class="policy-subtitle">Information Sharing</h2>
+          <p class="text-gray-600 leading-relaxed">We do not sell, trade, or otherwise transfer your personal information to third parties without your consent, except as described in this Privacy Policy. We may share your information with:</p>
+          <ul class="policy-list text-gray-600">
+            <li>When required by law or to protect our rights</li>
+          </ul>
+        </div>
+        
+        <div class="policy-section">
+          <h2 class="policy-subtitle">Data Security</h2>
+          <p class="text-gray-600 leading-relaxed">We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the internet is 100% secure.</p>
+        </div>
+        
+        
+      <div class="policy-section">
+        <h2 class="policy-subtitle">Children's Privacy</h2>
+        <p class="text-gray-600 leading-relaxed">
+        My website is intended for users of all ages.
+        </p>
+       </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Social Link Section -->
+<section class="py-16 bg-gradient-to-r from-primary to-secondary text-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-8 text-center">Connect With Me</h2>
+    <div class="flex justify-center space-x-6 flex-wrap">
+      <a href="https://www.facebook.com/pmabrarishraq6toha" class="social-icon text-white hover:text-accent transition">
+        <i class="fab fa-facebook-f text-2xl"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/pm-toha06" class="social-icon text-white hover:text-accent transition">
+        <i class="fab fa-linkedin text-2xl"></i>
+      </a>
+      <a href="https://twitter.com/AbrarIshraqToha" class="social-icon text-white hover:text-accent transition">
+        <i class="fab fa-twitter text-2xl"></i>
+      </a>
+      <a href="https://github.com/pmtoha" class="social-icon text-white hover:text-accent transition">
+        <i class="fab fa-github text-2xl"></i>
+      </a>
+      <a href="https://threads.net/pm.toha" class="social-icon text-white hover:text-accent transition" title="Threads">
+        <i class="fa-brands fa-threads text-2xl"></i>
+      </a>
+      <a href="https://instagram.com/pm.toha" class="social-icon text-white hover:text-accent transition">
+        <i class="fab fa-instagram text-2xl"></i>
+      </a>
+      <a href="https://reddit.com/user/pm-toha" class="social-icon text-white hover:text-accent transition">
+        <i class="fab fa-reddit text-2xl"></i>
+      </a>
+      <a href="https://t.me/toha37x" class="social-icon text-white hover:text-accent transition">
+        <i class="fab fa-telegram text-2xl"></i>
+      </a>
+      <a href="mailto:pmtoha05@protonmail.com" class="social-icon text-white hover:text-accent transition">
+        <i class="fas fa-envelope text-2xl"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-primaryDark text-white pt-16 pb-8 relative">
+  <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-accent to-primary"></div>
+  <div class="container mx-auto px-4">
+    <!-- Copyright -->
+    <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-gray-300 mb-4 md:mb-0">&copy; 2025 Made by Toha. All rights reserved.</p>
+      <div class="flex space-x-6">
+        <a href="Privacy-Policy.html" class="text-gray-300 hover:text-accent transition">Privacy Policy</a>
+        <a href="Terms-of-Service.html" class="text-gray-300 hover:text-accent transition">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    const icon = menuBtn.querySelector('i');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-times');
+  });
+  
+  document.addEventListener('click', (e) => {
+    if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target) && !mobileMenu.classList.contains('hidden')) {
+      mobileMenu.classList.add('hidden');
+      const icon = menuBtn.querySelector('i');
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    }
+  });
+</script>
+
+</body>
+</html>
