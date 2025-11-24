@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About - ABRAR ISHRAQ TOHA</title>
+  <link rel="icon" href="image5.png" type="image/png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1e40af',
+            primaryDark: '#1e3a8a',
+            secondary: '#2563eb',
+            accent: '#00CFFF',
+            lightGray: '#f8fafc'
+          },
+          fontFamily: {
+            'inter': ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .animate-fade-in {
+      animation: fadeIn 0.5s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .social-icon {
+      transition: all 0.3s ease;
+    }
+    .social-icon:hover {
+      transform: translateY(-3px) scale(1.1);
+    }
+    .wave {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 320'%3E%3Cpath fill='%231e3a8a' fill-opacity='1' d='M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,90.7C672,85,768,107,864,128C960,149,1056,171,1152,165.3C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z'%3E%3C/path%3E%3C/svg%3E");
+      background-size: cover;
+    }
+    
+    /* Styles for the Me section */
+    :root {
+      --primary: #4f46e5;
+      --primary-dark: #4338ca;
+      --secondary: #10b981;
+      --dark: #1f2937;
+      --light: #f9fafb;
+      --gray: #6b7280;
+      --border: #e5e7eb;
+      --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+      --radius: 12px;
+    }
+    
+    .card {
+      background: white;
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      transition: transform 0.3s ease;
+    }
+    
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .app-info {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    
+    /* Image Booth with White/Blur Style */
+    .image-booth {
+      flex-shrink: 0;
+      position: relative;
+      padding: 15px;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      border-radius: 20px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.5);
+    }
+    
+    .image-booth::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 20px;
+      padding: 3px;
+      background: linear-gradient(135deg, #4f46e5 0%, #00CFFF 50%, #10b981 100%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      z-index: -1;
+    }
+    
+    .image-container {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      border-radius: 15px;
+      overflow: hidden;
+      background: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .image-container img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .image-container:hover img {
+      transform: scale(1.05);
+    }
+    
+    .image-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%);
+      padding: 10px;
+      color: white;
+      font-size: 12px;
+      text-align: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    
+    .image-container:hover .image-overlay {
+      opacity: 1;
+    }
+    
+    .app-details h2 {
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .app-details p {
+      color: var(--gray);
+      margin-bottom: 1rem;
+      text-align: left; /* Ensure text is left-aligned */
+    }
+    
+    /* Responsive Design for the Me section */
+    @media (max-width: 768px) {
+      .app-info {
+        flex-direction: column;
+        text-align: left; /* Changed from center to left */
+        gap: 1.5rem;
+      }
+      
+      .image-container {
+        width: 180px;
+        height: 180px;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-inter">
+
+<!-- Navbar -->
+<nav class="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
+  <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+    <a href="index.html" class="flex items-center">
+      <img src="ttt.png" alt="Photo" class="h-10">
+      <span class="ml-3 font-bold text-xl">TOHA</span>
+    </a>
+    <div class="hidden md:flex space-x-6">
+    </div>
+    <button id="menuBtn" class="md:hidden text-primary">
+      <i class="fas fa-bars text-2xl"></i>
+    </button>
+  </div>
+  
+  <!-- Mobile Menu -->
+  <div id="mobileMenu" class="hidden md:hidden bg-white shadow-lg">
+    <div class="px-4 py-2 space-y-2">
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="pt-28 pb-16 bg-gradient-to-br from-primary to-secondary text-white relative overflow-hidden">
+  <div class="absolute inset-0 bg-black opacity-10"></div>
+  <div class="container mx-auto px-4 relative z-10">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4 animate-fade-in">ABRAR ISHRAQ TOHA</h1>
+    <p class="text-lg max-w-2xl mx-auto animate-fade-in opacity-90">Welcome to my website.</p>
+  </div>
+  <div class="wave"></div>
+</section>
+
+<!-- Spacer for better positioning -->
+<div class="h-12"></div>
+
+<!-- Me Section -->
+<section class="py-16 bg-lightGray">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl font-bold mb-4">About Me</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">Get to know more about me and my journey.</p>
+    </div>
+    
+    <!-- Card with Image Booth and App Details -->
+    <div class="card max-w-4xl mx-auto">
+      <div class="app-info">
+        <!-- Image Booth with White/Blur Style -->
+        <div class="image-booth">
+          <div class="image-container">
+            <img src="Toha.png" alt="Profile Picture">
+            <div class="image-overlay">ABRAR ISHRAQ TOHA</div>
+          </div>
+        </div>
+
+        <div class="app-details">
+          <h2>ABRAR ISHRAQ TOHA</h2>
+           <p>Hello! I’m P M Abrar Ishraq Toha. I am from Bangladesh. I am 18 years old and currently a student in 12th grade.</p>
+           <p>I studied at Khalgram High School and now I’m continuing my education at Varendra College Rajshahi.</p>
+           <p>I’ve loved technology since I was a child. Around the age of 15 or 16, I taught myself electrical wiring. Later, I started fixing small hardware problems on my own.</p>
+           <p>Over time, I learned programming and developed a few Android apps. I also built some websites and explored robotics and robot development. I enjoy working with both software and hardware, and I love creating solutions that combine the two.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Spacer for better positioning -->
+<div class="h-12"></div>
+
+<!-- Social Link Section -->
+<section class="py-16 bg-gradient-to-r from-primary to-secondary text-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold mb-8 text-center">Connect With Me</h2>
+    <div class="flex justify-center space-x-6 flex-wrap">
+      <a href="https://www.facebook.com/pmabrarishraq6toha" class="social-icon text-white hover:text-accent transition">
+        <i class="fab fa-facebook-f text-2xl"></i>
+      </a>
+      <a href="https://www.linkedin.com/in/pm-toha06" class="social-icon text-white hover:text-accent transition">
+        <i class="fab fa-linkedin text-2xl"></i>
+      </a>
+      <a href="https://twitter.com/AbrarIshraqToha" class="social-icon text-white hover:text-accent transition">
+        <i class="fab fa-twitter text-2xl"></i>
+      </a>
+      <a href="https://github.com/pmtoha" class="social-icon text-white hover:text-accent transition">
+        <i class="fab fa-github text-2xl"></i>
+      </a>
+      <a href="https://threads.net/pm.toha" class="social-icon text-white hover:text-accent transition" title="Threads">
+        <i class="fa-brands fa-threads text-2xl"></i>
+      </a>
+      <a href="https://instagram.com/pm.toha" class="social-icon text-white hover:text-accent transition">
+        <i class="fab fa-instagram text-2xl"></i>
+      </a>
+      <a href="https://reddit.com/user/pm-toha" class="social-icon text-white hover:text-accent transition">
+        <i class="fab fa-reddit text-2xl"></i>
+      </a>
+      <a href="https://t.me/toha37x" class="social-icon text-white hover:text-accent transition">
+        <i class="fab fa-telegram text-2xl"></i>
+      </a>
+      <a href="mailto:pmtoha05@protonmail.com" class="social-icon text-white hover:text-accent transition">
+        <i class="fas fa-envelope text-2xl"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-primaryDark text-white pt-16 pb-8 relative">
+  <div class="absolute top-0 left-0 right-0 h-2 bg-gradient-to-r from-accent to-primary"></div>
+  <div class="container mx-auto px-4">
+    <!-- Copyright -->
+    <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+      <p class="text-gray-300 mb-4 md:mb-0">&copy; 2025 Made by Toha. All rights reserved.</p>
+      <div class="flex space-x-6">
+        <a href="Privacy-Policy.html" class="text-gray-300 hover:text-accent transition">Privacy Policy</a>
+        <a href="Terms-of-Service.html" class="text-gray-300 hover:text-accent transition">Terms of Service</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const menuBtn = document.getElementById('menuBtn');
+  const mobileMenu = document.getElementById('mobileMenu');
+  
+  menuBtn.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+    const icon = menuBtn.querySelector('i');
+    icon.classList.toggle('fa-bars');
+    icon.classList.toggle('fa-times');
+  });
+  
+  document.addEventListener('click', (e) => {
+    if (!menuBtn.contains(e.target) && !mobileMenu.contains(e.target) && !mobileMenu.classList.contains('hidden')) {
+      mobileMenu.classList.add('hidden');
+      const icon = menuBtn.querySelector('i');
+      icon.classList.remove('fa-times');
+      icon.classList.add('fa-bars');
+    }
+  });
+</script>
+
+</body>
+</html>
